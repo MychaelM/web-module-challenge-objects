@@ -98,9 +98,11 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
+    const obj = reviews[index];
+    return `${obj.name} gave the restaurant a ${obj.rating}, and their feedback was: ${obj.feedback}`;
   }
   
+  getReviewByIndex(reviews, 0);
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
