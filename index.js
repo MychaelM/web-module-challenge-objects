@@ -67,9 +67,23 @@ function getFeedback(array, reviewerName) {
 getFeedback(reviews, "Julius");
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+reviews.push({
+  name: "Henry", rating: 5, feedback: "Twas ok."
+});
 
+console.log(reviews);
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+function updateFeedback(array, reviewerName, newFeedback){
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].name === reviewerName) {
+      array[i].feedback = newFeedback;
+    }
+    
+  }
+}
+
+updateFeedback(reviews,"Reyna","this place is chill with really cool people, great for getting work done on weekdays");
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
