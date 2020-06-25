@@ -142,7 +142,8 @@ function getLastReview(array) {
       for (let i = 0; i < array.length; i++) {
         const element = array[i].rating;
         /*search if rating is in object at index*/
-        if (element === rating) {
+        // console.log(Math.ceil(rating + 1));
+        if (element >= Math.floor(rating) && element < Math.floor(rating + 1)) {
           /*push object at index into new array*/
           newArray.push(array[i]);
         }
@@ -150,7 +151,7 @@ function getLastReview(array) {
       return newArray;
   }
 
-  getReviewByRating(reviews, 4);
+  getReviewByRating(reviews, 5);
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
