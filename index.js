@@ -205,7 +205,17 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odometer) {
+    // create empty object
+    const newObj = {};
+    // add odometer key:value to object
+    newObj.odometer = odometer;
+    // add drive method to object
+    newObj.drive = function(distance){
+      // access odometer value in obj and update to new value
+     return this.odometer = odometer + distance;
+    }
+    return newObj;
 }
+
+carMaker(120000);
